@@ -1,31 +1,9 @@
-layout = [
-    "PPPPPPPPPPPPPPPPPPPPPPPPPPP",
-    "P            P            P",
-    "P PPPP PPPPP P PPPPP PPPP P",
-    "P PPPP PPPPP P PPPPP PPPP P",
-    "P PPPP PPPPP P PPPPP PPPP P",
-    "P                         P",
-    "P PPPP PP PPPPPPP PP PPPP P",
-    "P PPPP PP PPPPPPP PP PPPP P",
-    "P      PP    P    PP      P",
-    "PPPPPP PPPPP P PPPPP PPPPPP",
-    "PPPPPP PPPPP P PPPPP PPPPPP",
-    "PPPPPP PP    P    PP PPPPPP",
-    "PPPPPP PP    P    PP PPPPPP",
-    "PPPPPP PP PPPPPPP PP PPPPPP",
-    "          PPPPPPP          ",
-    "PPPPPP PP PPPPPPP PP PPPPPP",
-    "PPPPPP PP    P    PP PPPPPP",
-    "PPPPPP PP    P    PP PPPPPP",
-    "PPPPPP PPPPP P PPPPP PPPPPP",
-    "PPPPPP PPPPP P PPPPP PPPPPP",
-    "P      PP    P    PP      P",
-    "P PPPP PP PPPPPPP PP PPPP P",
-    "P PPPP PP PPPPPPP PP PPPP P",
-    "P                         P",
-    "P PPPP PPPPP P PPPPP PPPP P",
-    "P PPPP PPPPP P PPPPP PPPP P",
-    "P PPPP PPPPP P PPPPP PPPP P",
-    "P            P            P",
-    "PPPPPPPPPPPPPPPPPPPPPPPPPPP",
-]
+class Pacman():
+
+    def __init__(self):
+        pass
+        #Initiate Position, Rectangle, and Sprite
+    def check_collide():
+        pass
+        #Check Velocities in both directions to detect whether they should be on either side.
+            
