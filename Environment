@@ -113,3 +113,23 @@ def main():
     rooms.append(room)  
     current_room_number = 0
     current_room = rooms[current_room_number]
+    
+    clock = pygame.time.Clock()
+ 
+    ##stop = False
+ 
+    while stop==False:
+    
+    ##movement stuff
+    
+    screen.fill(0,0,0)
+ 
+    movingsprites.draw(screen)
+    current_room.wallList.draw(screen)
+ 
+    pygame.display.flip() ##updates the entire Surface on the display regardless if any argument is passed
+ 
+    clock.tick(50)
+ 
+    pygame.quit()
+ 
