@@ -1,0 +1,115 @@
+
+class Pacman(pygame.sprite.sprite):
+  def __init__(self, x, y):
+
+        self.image = pygame.Surface([1200, 600])
+        self.image.fill(WHITE)
+ 
+        # Make our top-left corner the passed-in location.
+        self.rect = self.image.get_rect()
+        self.rect.y = ypos
+        self.rect.x = xpos
+        
+  def detectWalls(self, walls):
+        #left and right
+        self.rect.x += self.velocityx
+        
+        # hit a wall?
+        barrier_hit_list = pygame.sprite.spritecollide(self, walls, False)
+        for block in block_hit_list:
+            # moving right, set right side to left side of wall
+            if self.velocityx > 0:
+                self.rect.right = block.rect.left
+            else:
+                # moving left, vice versa.
+                self.rect.left = block.rect.right
+                
+        #up and down
+        self.rect.y += self.velocityy
+
+        # hit a wall?
+        barrier_hit_list = pygame.sprite.spritecollide(self, walls, False)
+        for block in block_hit_list:
+
+            # Reset our position based on the top/bottom of the object.
+            if self.velocityy > 0:
+                self.rect.bottom = block.rect.top
+            else:
+                self.rect.top = block.rect.bottom
+ class Wall(pygame.sprite.Sprite):
+    def __init__(self, wallx, wally, width, height):
+
+        self.image = pygame.Surface([width, height])
+        self.image.fill(50, 50, 255) #blue
+ 
+        # top-left corner is passed-in location.
+        #self.rect = self.image.get_rect()
+        #self.rect.y = ypos
+        #self.rect.x = xpos
+ class Room(object):
+
+    wallList = None     
+    enemySprites = None
+ 
+    def __init__(self):
+        self.wallList = pygame.sprite.Group()
+        self.enemySprites = pygame.sprite.Group()
+ class Room1(Room):
+
+    def __init__(self):
+
+        # Will Make the walls once decided. 
+ 
+        # a list of uncreated walls. Each is in the form [x, y, width, height]
+        #walls = [[],
+        #         [],
+        #        [],
+        #         [],
+        #         [],
+        #         [],
+        #         []
+        #        ]
+ 
+        # Loop through the list. 
+            #wall = Wall( ,  ,  , , , , , ,)
+            #self.wallList.add(wall)
+ class Room2(Room):
+
+    def __init__(self):
+
+        # Will Make the walls once decided. 
+ 
+        # a list of uncreated walls. Each is in the form [x, y, width, height]
+        #walls = [[],
+        #         [],
+        #        [],
+        #         [],
+        #         [],
+        #         [],
+        #         []
+        #        ]
+ 
+        # Loop through the list. 
+            #wall = Wall( ,  ,  , , , , , ,)
+            #self.wallList.add(wall)
+def main():
+ 
+    pygame.init()
+ 
+    screen = pygame.display.set_mode([1200, 600])
+ 
+    pygame.display.set_caption('Hackspace Pacman')
+ 
+    player = Player(50, 50)
+    movingsprites = pygame.sprite.Group()
+    movingsprites.add(player)
+ 
+    rooms = []
+ 
+    room = Room1()
+    rooms.append(room)
+ 
+    room = Room2()
+    rooms.append(room)  
+    current_room_number = 0
+    current_room = rooms[current_room_number]
