@@ -24,7 +24,7 @@ def pacman(x,y):
    gameDisplay.blit(pacmanImg, (x,y))
 
 def pacman1(x, y):
-   gameDisplay.blit(pacmanImg1, (x,y1))
+   gameDisplay.blit(pacmanImg1, (x1,y1))
  
 x =  (display_width * 0.45)
 y = (display_height * 0.8)
