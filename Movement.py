@@ -49,49 +49,64 @@ while not crashed:
                gameDisplay.blit(pacmanImg, player_rect)
                x_change = -3
                y_change = 0
+               if x == 0:
+                  x = display_width
            elif event.key == pygame.K_RIGHT:
                pacmanImg = ss.image_at((0, 0, 16, 16))
                player_rect = pacmanImg.get_rect()
                gameDisplay.blit(pacmanImg, player_rect)
                x_change = 3
                y_change = 0
+               if x == display_width:
+                  x = 0 
            elif event.key == pygame.K_UP:
                pacmanImg = ss.image_at((0, 32, 16, 16))
                player_rect = pacmanImg.get_rect()
                gameDisplay.blit(pacmanImg, player_rect)
                y_change = -3
                x_change = 0
+               if y = display_height:
+                  y = 0
            elif event.key == pygame.K_DOWN:
                pacmanImg = ss.image_at((0, 48, 16, 16))
                player_rect = pacmanImg.get_rect()
                gameDisplay.blit(pacmanImg, player_rect)
                y_change = 3
                x_change = 0
+               if y == 0: 
+                  y = display_height
            elif event.key == pygame.K_a:
                pacmanImg1 = ss.image_at((0, 16, 16, 16))
                player_rect = pacmanImg.get_rect()
                gameDisplay.blit(pacmanImg, player_rect)
                x1_change = -3
                y1_change = 0
+               if x == 0:
+                  x = display_width
            elif event.key == pygame.K_d:
                pacmanImg1 = ss.image_at((0, 0, 16, 16))
                player_rect = pacmanImg.get_rect()
                gameDisplay.blit(pacmanImg, player_rect)
                x1_change = 3
                y1_change = 0
+               if x == display_width:
+                  x = 0 
            elif event.key == pygame.K_w:
                pacmanImg1 = ss.image_at((0, 32, 16, 16))
                player_rect = pacmanImg.get_rect()
                gameDisplay.blit(pacmanImg, player_rect)
                y1_change = -3
                x1_change = 0
+               if y = display_height:
+                 y = 0
            elif event.key == pygame.K_s:
                pacmanImg1 = ss.image_at((0, 48, 16, 16))
                player_rect = pacmanImg.get_rect()
                gameDisplay.blit(pacmanImg, player_rect)
                y1_change = 3
                x1_change = 0
-     
+               if y == 0: 
+                 y = display_height
    x += x_change
    y += y_change    
    x1 += x1_change
