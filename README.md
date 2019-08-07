@@ -1,2 +1,2 @@
-# hackspace-pacman
-Pac Man Game for HackSpace
+# Pacman-PVP
+PVP remake of PacMan for HackSpace
